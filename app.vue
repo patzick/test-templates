@@ -1,35 +1,20 @@
 <script setup lang="ts">
-definePageMeta({
-  key: (route) => route.fullPath,
-});
-
-const { refreshSessionContext } = useSessionContext();
-const { refreshUser } = useUser();
-const { refreshCart } = useCart();
-useNotifications();
-useWishlist();
+const { refreshSessionContext, currency } = useSessionContext();
+// const { refreshUser } = useUser();
+// const { refreshCart } = useCart();
+// useNotifications();
+// useWishlist();
 
 onMounted(() => {
   refreshSessionContext();
-  refreshUser();
-  refreshCart();
+  // refreshUser();
+  // refreshCart();
 });
-
-const isSidebarOpen = ref(false);
-
-provide("isSidebarOpen", isSidebarOpen);
-const isModalOpened = ref(false);
-provide("isModalOpened", isModalOpened);
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    <h1>Hello it's your blank template for Shopware</h1>
+    <div>Our currency - {{ currency?.symbol }}</div>
+  </div>
 </template>
-
-<style>
-h2 {
-  @apply text-4xl py-4;
-}
-</style>
