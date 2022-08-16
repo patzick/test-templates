@@ -4,7 +4,7 @@ import transformerDirective from '@unocss/transformer-directives';
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
     strict: false,
   },
   buildModules: [
