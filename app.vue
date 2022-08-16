@@ -17,9 +17,9 @@ onMounted(() => {
 
 const isSidebarOpen = ref(false);
 
-provide("isSidebarOpen", isSidebarOpen);
+provide('isSidebarOpen', isSidebarOpen);
 const isModalOpened = ref(false);
-provide("isModalOpened", isModalOpened);
+provide('isModalOpened', isModalOpened);
 </script>
 
 <template>
