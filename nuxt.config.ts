@@ -1,17 +1,17 @@
-import { defineNuxtConfig } from "nuxt";
-import transformerDirective from "@unocss/transformer-directives";
+import { defineNuxtConfig } from 'nuxt';
+import transformerDirective from '@unocss/transformer-directives';
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
-    strict: true,
+    strict: false,
   },
   buildModules: [
-    "@vueuse/nuxt",
-    "@unocss/nuxt",
-    "@shopware-pwa/nuxt3-module",
-    "@shopware-pwa/cms-base",
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@shopware-pwa/nuxt3-module',
+    '@shopware-pwa/cms-base',
   ],
   components: true,
   // components: {
@@ -27,9 +27,9 @@ export default defineNuxtConfig({
     theme: {
       colors: {
         brand: {
-          primary: "#189eff",
-          light: "#5ebbff",
-          dark: "#0081df",
+          primary: '#189eff',
+          light: '#5ebbff',
+          dark: '#0081df',
         },
       },
     },
